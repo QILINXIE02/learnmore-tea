@@ -84,12 +84,12 @@ function displayTeaImages() {
 
   if (!isNaN(teaCount) && teaCount > 0 && teaCount <= 100) {
     const teas = [
-      { name: 'Japanese Green Tea', imageUrl: 'img/assets/greentea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
-      { name: 'Earl Grey Tea', imageUrl: 'img/assets/Earl-Grey-tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
-      { name: 'Chamomile Tea', imageUrl: 'img/assets/Chamomile.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
-      { name: 'Yerba Mate', imageUrl: 'img/assets/yerba-mate-tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
-      { name: 'South African Rooibos', imageUrl: 'img/assets/South-African-Rooibos-tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
-      { name: 'Australian Lemon Myrtle Tea', imageUrl: 'img/assets/Australian-Lemon-Myrtle-Tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' }
+      { name: 'Japanese Green Tea', imageUrl: 'img/greentea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
+      { name: 'Earl Grey Tea', imageUrl: 'img/Earl-Grey-tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
+      { name: 'Chamomile Tea', imageUrl: 'img/Chamomile.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
+      { name: 'Yerba Mate', imageUrl: 'img/yerba-mate-tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
+      { name: 'South African Rooibos', imageUrl: 'img/South-African-Rooibos-tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' },
+      { name: 'Australian Lemon Myrtle Tea', imageUrl: 'img/Australian-Lemon-Myrtle-Tea.jpg', link: 'https://team-quicm.github.io/Tea-Explorer/teas.html' }
     ];
 
     const teasToShow = Math.min(teaCount, teas.length);
