@@ -15,12 +15,22 @@
 </head>
 
 <body>
+<!-- Language Selection -->
+<div id="languageSelection">
+  <label for="languageSelect" data-translate="Select Language:">Select Language:</label>
+  <select id="languageSelect" onchange="changeLanguage()">
+    <option value="en" data-translate="English">English</option>
+    <option value="es" data-translate="Español">Español</option>
+  </select>
+</div>
+
   <header id="topHeader">
     <div id="logoContainer">
       <a href="index.html" alt="Logo link to map page">
         <img src="img/logo-trans.png" alt="team-logo" width="100" height="100" />
       </a>
-      <h1>Tea Explorer</h1>
+      <h1 lang="en">Tea Explorer</h1>
+      <h1 lang="es" style="display: none;">Explorador de Té</h1>
   </div>
     <nav>
         <a href="explore.html" alt="Map page link" data-page="explorer">EXPLORE</a>
@@ -31,6 +41,7 @@
         <a href="about-us.html" alt="About us link" data-page="about-us">ABOUT</a>
     </nav>
   </header>
+
   <main>
     <br>
     <div class="button-container">
@@ -236,11 +247,14 @@
     </div>
     <br>
   </main>  
-</body>
+
 <footer id="bottomFooter">
   <section class="copyright">
     <p style="font-weight: bold; font-size: 18px;">© 2023 Tea Explorer</p>
   </section>
 </footer>
-<script src="js/learnmore.js"></script>
+
+  <script src="js/learnmore.js"></script>
+  <script src="js/translations.js"></script>
+</body>
 </html>

@@ -136,3 +136,25 @@ function displayTeaImages() {
     showError(teaImagesContainer, 'Please enter a valid number greater than 0.');
   }
 }
+
+//11/28 translation try
+// Call updateUI() when the page loads
+document.addEventListener('DOMContentLoaded', updateUI);
+
+// Function to change the language
+function changeLanguage() {
+  const languageSelect = document.getElementById('languageSelect');
+  currentLanguage = languageSelect.value;
+
+  // Call a function to update the UI based on the selected language
+  updateUI();
+}
+
+// Function to update the UI based on the selected language
+function updateUI() {
+  // Hide all elements with lang attribute
+  const langElements = document.querySelectorAll('[lang]');
+  langElements.forEach((element) => {
+    element.style.display = element.lang === currentLanguage ? 'block' : 'none';
+  });
+}
