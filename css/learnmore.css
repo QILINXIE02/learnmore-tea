@@ -1,0 +1,294 @@
+body {
+  font-family: 'Josefin Sans', sans-serif, monospace;
+  background-color: #F2EBE1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  min-width: 1280px;
+}
+
+main {
+  height: calc(100% - 20vh);
+}
+
+#topHeader {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 15vh;
+}
+
+#topHeader>* {
+  letter-spacing: 0.3rem;
+}
+
+#topHeader #logoContainer {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  align-items: center;
+}
+
+#logoContainer img {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: 15vh
+}
+
+#topHeader div h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 2vmax;
+}
+
+#topHeader nav {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1vmax;
+  font-weight: 500;
+}
+
+#topHeader nav a {
+  text-decoration: none;
+  color: black;
+}
+
+#topHeader nav a:hover {
+  transform: translateY(1px);
+}
+
+.active {
+  font-weight: 800;
+}
+
+#bottomFooter {
+  height: 5vh;
+  background-color: #e1d0bc;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px; 
+}
+
+#our-favorite-teas {
+  text-align: center;
+}
+
+#our-favorite-teas h2 {
+  margin-bottom: 10px; 
+}
+
+#our-favorite-teas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#our-favorite-teas li {
+  margin: 10px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Josefin Sans', Josefin Sans;
+  color: black;
+  text-alrgb(49, 19, 2)nter;
+  padding: 20px 0;
+}
+
+.location-info {
+  max-width: 800px;
+  margin: 20px auto; 
+  padding: 20px;
+  background-color: #FAF9F8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+}
+
+.location-info h2 {
+  color: #333;
+  font-size: 24px; 
+}
+
+.location-info h3 {
+  color: #006600;
+  font-size: 20px; 
+}
+
+.location-info p {
+  line-height: 1.6;
+  margin: 10px 0; 
+  font-size: 16px; 
+}
+
+.location-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0; 
+}
+
+.location-info li {
+  margin-bottom: 10px;
+  font-size: 16px; 
+}
+
+.location-info img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  margin-top: 10px; 
+}
+
+.link-container {
+  text-align: right;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.link-container a {
+  text-decoration: none;
+  color: #333; 
+  margin: 0 10px;
+}
+
+.link-container a:hover {
+  color: #C16632; 
+}
+
+.copyright {
+  font-weight: bold;
+  background-color: B59275;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.location-info {
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.location-info h2 {
+  color: #333;
+}
+
+.location-info h3 {
+  color: #006600;
+}
+
+.location-info p, .location-info ul {
+  margin-bottom: 10px;
+}
+
+.location-info ul {
+  padding-left: 20px;
+}
+
+.location-info li {
+  list-style-type: disc;
+}
+
+.one-two-header p{
+  font-size: 35px;
+  text-align: left;
+  font-family: 'Cedarville Cursive' , cursive;
+  font-weight: bold; 
+}
+
+.one-two-rightheader {
+  display:flex;
+  align-items: center;
+}
+
+.one-two-leftheader{
+  display:flex;
+  align-items: center;
+}
+
+.one-two-leftheader img {
+  padding: 10px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px; 
+}
+
+.one-two-header {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.one-two-rightheader {
+  display: flex;
+  align-items: center;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #01010f;
+}
+
+#header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+#cartIcon {
+  padding: 10px;
+  background-color: #C16632;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#teaImages img {
+  margin: 5px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tea-image-container {
+  text-align: center;
+  margin-bottom: 10px;
+}

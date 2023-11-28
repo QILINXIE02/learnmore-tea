@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn More About Types of Tea</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/learnmore.css">
+  <link rel="stylesheet" href="css/favorites-tab.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e73ad52303.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="topHeader">
+    <div id="logoContainer">
+      <a href="index.html" alt="Logo link to map page">
+        <img src="img/logo-trans.png" alt="team-logo" width="100" height="100" />
+      </a>
+      <h1>Tea Explorer</h1>
+  </div>
+    <nav>
+        <a href="explore.html" alt="Map page link" data-page="explorer">EXPLORE</a>
+        <a href="categories.html" data-page="categories">CATEGORIES</a>
+        <a href="index.html" alt="Homepage Link" data-page="index">LEARN MORE</a>
+        <a href="events.html" alt="Homepage Link" data-page="events"> EVENTS</a>
+        <a href="favorite.html" alt="favorite link" data-page="favorite">FAVORITES</a>
+        <a href="about-us.html" alt="About us link" data-page="about-us">ABOUT</a>
+    </nav>
+  </header>
+  <main>
+    <br>
+    <div class="button-container">
+      <label for="colorInput">Set page background color:</label>
+      <input type="text" id="colorInput" placeholder="Enter a color">
+      <button onclick="changePageColor()">Change Color</button>
+      <button id="toggle-mode" class="highlight">Dark Mode</button><br><br>
+      <a href="index.html#purchaselink">Purchase tea link</a>
+      <h1 style="font-size: 35px;">Learn More About Varieties of Tea: </h1>
+    </div>
+    
+    <section id="our-favorite-teas">
+      <h2>Our Teas(Click on hearts to add to favorite):</h2>
+      <ul>
+        <li>
+          Japanese Green Tea
+          <i class="fa-regular fa-heart" id="green"></i>
+        </li>
+        <li>
+          Earl Grey Tea
+          <i class="fa-regular fa-heart" id="earl"></i>
+        </li>
+        <li>
+          Chamomile Tea
+          <i class="fa-regular fa-heart" id="chamomile"></i>
+        </li>
+        <li>
+          Yerba Mate
+          <i class="fa-regular fa-heart" id="yerba"></i>
+        </li>
+        <li>
+          South African Rooibos
+          <i class="fa-regular fa-heart" id="rooibos"></i>
+        </li>
+        <li>
+          Australian Lemon Myrtle Tea
+          <i class="fa-regular fa-heart" id="lemon"></i>
+        </li>
+      </ul>
+    </section>
+    
+    <br>
+    <br>
+    
+    <section id="recommendations">
+      <div class="location-info" id="greenTea"> 
+        <h2>Feature Tea: Japanese Green Tea</h2><br><br>
+        <h2>Kyoto</h2>
+        <p>Hours: 9:00 AM - 6:00 PM</p>
+        <p>Contact: kyoto@greenteahaven.com</p>
+          <div class="image-container">
+            <img src="img/greentea.jpg" alt="green-tea" width="100" height="100">
+        </div>
+        <p>Address: 123 Sakura Lane, Kyoto, Japan</p>
+        <p>Experience the tranquility of Japanese green tea! Our carefully selected green tea leaves, rich in antioxidants and natural goodness, offer a plethora of health benefits:</p>
+    
+        <ul>
+            <li><strong>Boosts Metabolism:</strong> Japanese green tea is known to enhance metabolism, aiding in weight management.</li>
+            <li><strong>Rich in Antioxidants:</strong> The tea is packed with antioxidants that combat free radicals, promoting overall health.</li>
+            <li><strong>Calming Effect:</strong> The L-theanine in green tea has a relaxing effect, reducing stress and promoting mental clarity.</li>
+            <li><strong>Supports Heart Health:</strong> Regular consumption may contribute to improved cardiovascular health.</li>
+            <li><strong>Detoxifies the Body:</strong> Green tea is believed to assist in the natural detoxification process of the body.</li>
+            <li><strong>Enhances Skin Health:</strong> Antioxidants in green tea may contribute to a radiant and healthy complexion.</li>
+        </ul>
+        
+        <p>Join us in Kyoto for a journey into the world of premium Japanese green tea and embrace the holistic benefits it brings to your well-being.</p>
+    </div><br><br>
+    
+    <div class="location-info" id="earlTea">    
+      <h2>Feature Tea: Earl Grey Tea</h2>
+      <br><br><h2>London</h2>
+      <p>Hours: 8:00 AM - 7:00 PM</p>
+      <p>Contact: london@earlgreyteas.com</p>
+      <div class="image-container">
+        <img src="img/Earl-Grey-tea.jpg" alt="Earl-Grey-tea" width="100" height="100">
+    </div>
+      <p>Address: 456 Earl Street, London, England</p>
+      
+      <p>Indulge in the classic elegance of Earl Grey tea, a delightful blend of black tea infused with bergamot oil. The benefits of Earl Grey tea include:</p>
+    
+      <ul>
+          <li><strong>Aromatic Citrus Flavor:</strong> The infusion of bergamot oil gives Earl Grey its distinctive and refreshing citrus aroma, providing a sensory delight with every sip.</li>
+          <li><strong>Antioxidant Properties:</strong> Black tea, the base of Earl Grey, is rich in antioxidants that help combat free radicals in the body, supporting overall health.</li>
+          <li><strong>Mood Enhancement:</strong> Bergamot oil is believed to have mood-enhancing properties, contributing to stress relief and relaxation.</li>
+          <li><strong>Heart Health:</strong> Regular consumption of black tea has been associated with cardiovascular benefits, promoting heart health.</li>
+      </ul>
+      
+      <p>Join us in London to experience the refined taste and numerous benefits of our carefully crafted Earl Grey tea blend.</p>
+    </div><br><br>
+    
+    <div class="location-info" id="chamomileTea">
+      <h2>Feature Tea: Chamomile Tea</h2><br><br>
+      <h2>Los Angeles</h2>
+      <div class="image-container">
+        <img src="img/Chamomile.jpg" alt="Chamomile" width="100" height="100">
+    </div>
+      <p>Hours: 7:00 AM - 9:00 PM</p>
+      <p>Contact: LA@chamomilehaven.com</p>
+      <p>Address: 789 Relaxation Blvd, Los Angeles, USA</p>
+      
+      <p>Unwind with the soothing taste of Chamomile tea, a herbal infusion renowned for its calming properties. The benefits of Chamomile tea include:</p>
+      
+      <ul>
+          <li><strong>Natural Relaxant:</strong> Chamomile contains compounds that may help relax muscles and nerves, promoting a sense of calm and aiding in better sleep.</li>
+          <li><strong>Digestive Support:</strong> Chamomile is known for its digestive benefits, helping to soothe the stomach and alleviate indigestion or bloating.</li>
+          <li><strong>Anti-Inflammatory:</strong> The anti-inflammatory properties of Chamomile may contribute to reducing inflammation in the body and supporting overall well-being.</li>
+          <li><strong>Immune Boost:</strong> With its antioxidants, Chamomile tea may help strengthen the immune system, providing added defense against common illnesses.</li>
+      </ul>
+      
+      <p>Visit us in Los Angeles to experience the gentle flavor and holistic benefits of our premium Chamomile tea blend.</p>
+    </div><br><br>
+    
+    <div class="location-info" id="yerbaTea"> 
+      <h2>Feature Tea: Yerba Mate</h2><br><br>
+      <h2>Buenos Aires</h2>
+      <div class="image-container">
+        <img src="img/yerba-mate-tea.jpg" alt="yerba-mate" width="150" height="100">
+    </div>
+      <p>Hours: 10:00 AM - 8:00 PM</p>
+      <p>Contact: buenosaires@yerbamate.com</p>
+      <p>Address: 101 Mate Avenue, Buenos Aires, Argentina</p>
+      
+      <p>Experience the energy of Yerba Mate, a traditional South American herbal tea. The benefits of Yerba Mate include:</p>
+      
+      <ul>
+          <li><strong>Natural Stimulant:</strong> Yerba Mate contains caffeine and theobromine, providing a natural energy boost without the jitters associated with other caffeinated beverages.</li>
+          <li><strong>Rich in Antioxidants:</strong> Packed with antioxidants, Yerba Mate helps combat oxidative stress and supports overall cellular health.</li>
+          <li><strong>Improved Mental Focus:</strong> The combination of caffeine and other compounds in Yerba Mate may contribute to enhanced mental alertness and focus.</li>
+          <li><strong>Digestive Health:</strong> Yerba Mate has been traditionally used to aid digestion and may support a healthy digestive system.</li>
+      </ul>
+      
+      <p>Join us in Buenos Aires to savor the robust flavor and invigorating benefits of our premium Yerba Mate tea blend.</p>
+    </div><br><br>
+    
+    <div class="location-info" id="rooibosTea"> 
+      <h2>Feature Tea: South African Rooibos</h2><br><br>
+    <h2>Cape Town</h2> 
+      <div class="image-container">
+        <img src="img/South-African-Rooibos-tea.jpg" alt="South-African-Rooibos-tea" width="100" height="100">
+    </div>
+      <p>Hours: 8:30 AM - 6:30 PM</p>
+      <p>Contact: capetown@rooibosdelight.com</p>
+      <p>Address: 234 Sunset Rooibos Way, Cape Town, South Africa</p>
+      <p>Discover the unique flavor of South African Rooibos, a caffeine-free herbal tea with a wealth of benefits. The advantages of Rooibos tea include:</p>
+      
+      <ul>
+          <li><strong>Antioxidant Power:</strong> Rooibos is rich in antioxidants, helping to neutralize free radicals and support the body's natural defense mechanisms.</li>
+          <li><strong>Calming Properties:</strong> Rooibos contains compounds that may have a calming effect, making it an excellent choice for relaxation and stress relief.</li>
+          <li><strong>Healthy Skin:</strong> The antioxidants in Rooibos contribute to healthier skin by promoting a youthful complexion and combating oxidative damage.</li>
+          <li><strong>Mineral Boost:</strong> Rooibos is a good source of minerals, including calcium, potassium, and magnesium, which contribute to overall well-being.</li>
+      </ul>
+      
+      <p>Visit us in Cape Town to experience the rich, smooth taste and numerous health benefits of our premium South African Rooibos tea blend.</p>
+    </div><br><br>
+    
+    <div class="location-info" id="lemonTea"> 
+      <h2>Feature Tea: Australian Lemon Myrtle Tea</h2><br><br>
+      <h2>Sydney</h2> 
+      <div class="image-container">
+        <img src="img/Australian-Lemon-Myrtle-Tea.jpg" alt="lemon-myrtle-tea" width="150" height="100">
+    </div>
+      <p>Hours: 9:00 AM - 5:00 PM</p>
+      <p>Contact: sydney@lemonmyrtletea.com</p>
+      <p>Address: 345 Eucalyptus Lane, Sydney, Australia</p>
+      
+      <p>Enjoy the refreshing taste of Australian Lemon Myrtle Tea, a unique herbal infusion with a burst of citrus flavor. The benefits of Australian Lemon Myrtle Tea include:</p>
+      
+      <ul>
+          <li><strong>Zesty Immune Support:</strong> Lemon Myrtle is rich in antioxidants and vitamin C, providing a natural boost to the immune system and promoting overall health.</li>
+          <li><strong>Antimicrobial Properties:</strong> Lemon Myrtle has antimicrobial and antifungal properties, contributing to a healthy digestive system and oral hygiene.</li>
+          <li><strong>Stress Relief:</strong> The citrus aroma of Lemon Myrtle may have calming effects, helping to alleviate stress and promote relaxation.</li>
+          <li><strong>Digestive Comfort:</strong> Australian Lemon Myrtle Tea is known for its digestive benefits, aiding in digestion and reducing bloating.</li>
+      </ul>
+      
+      <p>Join us in Sydney to experience the delightful flavor and wellness benefits of our premium Australian Lemon Myrtle Tea blend.</p>
+    </div><br><br>
+    
+    <div id="purchaselink" style="text-align: center;">
+      <h1 style="font-size: 35px;">Purchase our Signature Teas: </h1>
+      <label for="nameInput">Enter your name:</label>
+      <input type="text" id="nameInput" placeholder="Your name">
+      <button onclick="updateGreeting()">Submit Name</button>
+      <p id="greeting"></p>
+      <h2>🍵🌿🫖☕️</h2>
+      <div id="header">
+        <div id="cartIcon" onclick="showShoppingCart()"> Shopping Cart ☕️(0)</div>
+      </div>
+      <section id="tea">
+        <h2>Amounts of tea:</h2><br>
+        <a href="index.html#greenTea">Japanese Green Tea,</a>
+        <a href="index.html#earlTea">Earl Grey Tea,</a>
+        <a href="index.html#chamomileTea">Chamomile Tea,</a>
+        <a href="index.html#yerbaTea">Yerba Mate,</a>
+        <a href="index.html#rooibosTea">South African Rooibos,</a>
+        <a href="index.html#lemonTea">Australian Lemon Myrtle Tea</a><br>
+        <label for="teaInput">Enter the number of the tea you want:</label>
+        <input type="number" id="teaInput" placeholder="Enter a number">
+        <button onclick="displayTeaImages()">Show teas</button>
+        <div id="teaImages"><br></div><br>
+        <p>After adding tea to the shopping cart, click on shopping cart item(s) to confirm amounts</p>
+        <button id="confirmButton">Confirm</button>
+      </section>
+    </div>
+    <br>
+  </main>  
+</body>
+<footer id="bottomFooter">
+  <section class="copyright">
+    <p style="font-weight: bold; font-size: 18px;">© 2023 Tea Explorer</p>
+  </section>
+</footer>
+<script src="js/learnmore.js"></script>
+</html>
