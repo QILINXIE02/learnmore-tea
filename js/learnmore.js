@@ -44,7 +44,7 @@ function changePageColor() {
 
 function showError(element, message) {
   element.textContent = message;
-  element.style.color = 'red';
+  element.style.color = 'black';
 }
 
 function inputIsValid(input) {
@@ -177,12 +177,12 @@ function updateCountdown() {
     if (timeDifference <= 0 && !alertShown) {
         document.getElementById('countdown').innerHTML = "Time's up! Your items have been removed from the cart.";
         alert("We have removed your shopping cart items. If they are still available, please confirm your purchases within the next 10 minutes.");
-        alertShown = true;  // Set the flag to true to indicate that the alert has been shown
+        alertShown = true;  // 
     }
 }
 
 setInterval(updateCountdown, 1000);
-updateCountdown();  // Initial call to set the initial countdown display
+updateCountdown(); 
 
 //12/5 afternnon 2nd attempt to add log in authentication
 let loggedInUser = null;
@@ -219,7 +219,7 @@ function updateUI() {
   const logoutButton = document.getElementById('logoutButton');
   const errorElement = document.getElementById('error');
 
-  // Hide or show elements based on authentication state
+
   if (loggedInUser) {
     loginForm.style.display = 'none';
     welcomeMessage.style.display = 'block';
@@ -237,7 +237,6 @@ function updateUI() {
   }
 }
 
-// Additional features
 document.addEventListener('DOMContentLoaded', function () {
   // Focus on the username input when the page loads
   const usernameInput = document.getElementById('username');
@@ -245,7 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
     usernameInput.focus();
   }
 
-  // Pressing Enter in the password field triggers account creation
   const passwordInput = document.getElementById('password');
   if (passwordInput) {
     passwordInput.addEventListener('keyup', function (event) {
@@ -254,4 +252,75 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-});
+}); 
+
+
+//1. avaScript for Submitting Reviews
+function submitReview() {
+  const userName = document.getElementById('userName').value;
+  const rating = document.getElementById('rating').value;
+  const reviewText = document.getElementById('reviewText').value;
+
+  if (userName && rating && reviewText) {
+    const review = {
+      user: userName,
+      rating: rating,
+      text: reviewText,
+      date: new Date().toISOString()  
+    };
+
+    let reviews = JSON.parse(localStorage.getItem('teaReviews')) || [];
+    
+    reviews.push(review);
+
+    localStorage.setItem('teaReviews', JSON.stringify(reviews));
+
+    displayReviews();
+
+    document.getElementById('reviewForm').reset();
+  } else {
+    alert('Please fill in all fields before submitting the review.');
+  }
+}
+
+//2. Displaying Reviews:
+function displayReviews() {
+  const reviewsContainer = document.getElementById('reviewsContainer');
+
+  const reviews = JSON.parse(localStorage.getItem('teaReviews')) || [];
+
+  reviewsContainer.innerHTML = '';
+
+  reviews.forEach(review => {
+    const reviewElement = document.createElement('div');
+    reviewElement.innerHTML = `
+      <p><strong>${review.user}</strong> - Rating: ${review.rating}</p>
+      <p>${review.text}</p>
+      <p>${review.date}</p>
+      <hr>
+    `;
+    reviewsContainer.appendChild(reviewElement);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', displayReviews);
+
+function shareOnFacebook() {
+  const urlToShare = encodeURIComponent(window.location.href);
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${urlToShare}`;
+  openNewWindow(facebookShareUrl);
+}
+
+function shareOnTwitter() {
+  const urlToShare = encodeURIComponent(window.location.href);
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${urlToShare}&text=Check out this amazing tea website!`;
+  openNewWindow(twitterShareUrl);
+}
+
+function shareOnInstagram() {
+  alert("To share on Instagram, please use the Instagram app or website manually.");
+}
+
+function openNewWindow(url) {
+  window.open(url, '_blank', 'width=600,height=400');
+}

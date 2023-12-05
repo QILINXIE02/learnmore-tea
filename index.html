@@ -34,7 +34,7 @@
   </header>
 
   <main>
-    <!-- Language Selection -->
+    
 <div id="languageSelection">
   <label for="languageSelect" data-translate="Select Language:">Select Language:</label>
   <select id="languageSelect" onchange="changeLanguage()">
@@ -240,35 +240,67 @@
     </div><br><br>
     
     <div id="purchaselink" style="text-align: center;">
-      <h1 style="font-size: 35px;">Purchase our Signature Teas: </h1>
+      <h1 style="font-size: 35px;">Purchase our Signature Teas:</h1>
       <label for="nameInput">Enter your name:</label>
       <input type="text" id="nameInput" placeholder="Your name">
       <button onclick="updateGreeting()">Submit Name</button>
       <p id="greeting"></p>
       <h2>🍵🌿🫖☕️</h2>
+    
       <div id="header">
-        <div id="cartIcon" onclick="showShoppingCart()"> Shopping Cart ☕️(0)</div>
+        <div id="cartIcon" onclick="showShoppingCart()">Shopping Cart ☕️(0)</div>
       </div>
+    
       <section id="tea">
-        <h2>Amounts of tea:</h2><br>
+        <h2>Amounts of tea:</h2>
         <a href="index.html#greenTea">Japanese Green Tea,</a>
         <a href="index.html#earlTea">Earl Grey Tea,</a>
         <a href="index.html#chamomileTea">Chamomile Tea,</a>
         <a href="index.html#yerbaTea">Yerba Mate,</a>
         <a href="index.html#rooibosTea">South African Rooibos,</a>
         <a href="index.html#lemonTea">Australian Lemon Myrtle Tea</a><br>
+    
         <label for="teaInput">Enter the number of the tea you want:</label>
         <input type="number" id="teaInput" placeholder="Enter a number">
         <button onclick="displayTeaImages()">Show teas</button>
+    
         <div id="teaImages"><br></div><br>
         <p>After adding tea to the shopping cart, click on shopping cart item(s) to confirm amounts</p>
         <div id="countdown">You have 10 minutes to keep the items in your shopping cart!</div>
         <button id="confirmButton">Confirm</button>
       </section>
     </div>
-    <br>
-  </main>  
+    
+    <br><br>
+    
+    <section id="reviews">
+      <form id="reviewForm">
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" required>
+    
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" min="1" max="5" required>
+    
+        <label for="reviewText">Review:</label>
+        <textarea id="reviewText" required></textarea>
+    
+        <button type="button" onclick="submitReview()">Submit Review</button>
+      </form>
 
+      <div id="chartContainer">
+        <canvas id="reviewChart"></canvas>
+      </div>
+      <div id="reviewsContainer"></div>
+  
+    </section>
+    
+
+    <div id="socialMediaButtons">
+      <a href="#" onclick="shareOnFacebook()">Share on Facebook</a>
+      <a href="#" onclick="shareOnTwitter()">Share on Twitter</a>
+      <a href="#" onclick="shareOnInstagram()">Share on Instagram</a>
+    </div>
+    
 <footer id="bottomFooter">
   <section class="copyright">
     <p style="font-weight: bold; font-size: 18px;">© 2023 Tea Explorer</p>
