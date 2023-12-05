@@ -292,3 +292,62 @@ body.dark-mode {
   text-align: center;
   margin-bottom: 10px;
 }
+
+/* 12/5 */
+#countdown {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  color: red;
+  animation: pulse 1s infinite alternate; /* Flashing animation */
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+}
+
+#loginForm {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+#loginForm h2 {
+  margin-bottom: 20px;
+}
+
+#loginForm label,
+#loginForm input,
+#loginForm button {
+  margin-bottom: 10px;
+}
+
+#loginForm button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#welcomeMessage,
+#logoutButton {
+  display: none;
+}
+
+#error {
+  color: red;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;

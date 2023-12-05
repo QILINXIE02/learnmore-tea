@@ -42,6 +42,27 @@
     <option value="es" data-translate="Español">Español</option>
   </select>
 </div>
+
+<br><br>
+
+<div id="loginForm">
+  <h2>Create an Account</h2>
+  <label for="username">Username:</label>
+  <input type="text" id="username" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" required>
+  <br>
+  <button onclick="createAccount()">Create/Log in</button>
+  <p id="error"></p>
+</div>
+<br>
+<div id="welcomeMessage">
+  <h2>Welcome, <span id="loggedInUser"></span>!</h2>
+  <p>Your password is securely stored.</p>
+  <button onclick="logout()">Logout</button>
+</div>
+
     <br>
     <div class="button-container">
       <label for="colorInput">Set page background color:</label>
@@ -51,7 +72,7 @@
       <a href="index.html#purchaselink">Purchase tea link</a>
       <h1 style="font-size: 35px;">Learn More About Varieties of Tea: </h1>
     </div>
-    
+    <canvas id="heartCanvas" width="200" height="200"></canvas>
     <section id="our-favorite-teas">
       <h2>Our Teas(Click on hearts to add to favorite):</h2>
       <ul>
@@ -241,6 +262,7 @@
         <button onclick="displayTeaImages()">Show teas</button>
         <div id="teaImages"><br></div><br>
         <p>After adding tea to the shopping cart, click on shopping cart item(s) to confirm amounts</p>
+        <div id="countdown">You have 10 minutes to keep the items in your shopping cart!</div>
         <button id="confirmButton">Confirm</button>
       </section>
     </div>
