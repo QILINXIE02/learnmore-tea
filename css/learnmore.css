@@ -310,12 +310,13 @@ body.dark-mode {
   100% {
       transform: scale(1.1);
   }
+
 }#loginForm {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
 }
 
 #loginForm h2 {
@@ -338,29 +339,6 @@ body.dark-mode {
   display: none;
 }
 
-#error {
-  color: red;
-}
-
-#reviews {
-  text-align: center;
-}
-
-#reviews {
-  background-color:#C16632; 
-  padding: 20px;
-  border-radius: 30px;
-}
-
-#reviewForm {
-  margin-bottom: 20px;
-}
-
-#reviewsContainer {
-  border-top: 1px solid #ddb5b5; 
-  padding-top: 20px;
-}
-
 #socialMediaButtons {
   margin-top: 20px;
 }
@@ -377,4 +355,68 @@ body.dark-mode {
 
 #socialMediaButtons a:hover {
   background-color: #4267B2;
+}
+
+#digitalClockContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#clockLabel {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333; /* Adjust the color as needed */
+}
+
+#digitalClock {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555; /* Adjust the color as needed */
+  border: 2px solid #555; /* Add a border for a clock-like appearance */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#reviews {
+  text-align: center;
+}
+
+.review-form-container {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#reviewForm label,
+#reviewForm input,
+#reviewForm textarea {
+  margin-bottom: 10px;
+}
+
+#reviewForm button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#reviewForm button:hover {
+  background-color: #45a049;
+}
+
+#reviewsContainer {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
 }

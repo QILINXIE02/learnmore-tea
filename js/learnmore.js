@@ -169,20 +169,22 @@ function updateCountdown() {
     const currentTime = new Date();
     const timeDifference = endTime - currentTime;
 
-    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-    document.getElementById('countdown').innerHTML = `You have ${minutes} minutes and ${seconds} seconds to keep the items in your shopping cart!`;
-
     if (timeDifference <= 0 && !alertShown) {
         document.getElementById('countdown').innerHTML = "Time's up! Your items have been removed from the cart.";
         alert("We have removed your shopping cart items. If they are still available, please confirm your purchases within the next 10 minutes.");
-        alertShown = true;  // 
+        alertShown = true;
+        clearInterval(countdownInterval); // Stop the interval once the time is up
+    } else {
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown').innerHTML = `You have ${minutes} minutes and ${seconds} seconds to keep the items in your shopping cart!`;
     }
 }
 
-setInterval(updateCountdown, 1000);
-updateCountdown(); 
+const countdownInterval = setInterval(updateCountdown, 1000);
+updateCountdown();
+
 
 //12/5 afternnon 2nd attempt to add log in authentication
 let loggedInUser = null;
@@ -324,3 +326,18 @@ function shareOnInstagram() {
 function openNewWindow(url) {
   window.open(url, '_blank', 'width=600,height=400');
 }
+
+//digital clock
+function updateDigitalClock() {
+    const currentDateTime = new Date();
+    const hours = currentDateTime.getHours().toString().padStart(2, '0');
+    const minutes = currentDateTime.getMinutes().toString().padStart(2, '0');
+    const seconds = currentDateTime.getSeconds().toString().padStart(2, '0');
+
+    const digitalClock = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('digitalClock').innerHTML = digitalClock;
+}
+
+// Update the digital clock every second
+setInterval(updateDigitalClock, 1000);
+updateDigitalClock();

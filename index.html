@@ -35,6 +35,10 @@
 
   <main>
     
+    <div id="digitalClockContainer">
+      <p id="clockLabel">Current Time:  <div id="digitalClock"></div></p>
+    </div>
+<br>
 <div id="languageSelection">
   <label for="languageSelect" data-translate="Select Language:">Select Language:</label>
   <select id="languageSelect" onchange="changeLanguage()">
@@ -72,7 +76,6 @@
       <a href="index.html#purchaselink">Purchase tea link</a>
       <h1 style="font-size: 35px;">Learn More About Varieties of Tea: </h1>
     </div>
-    <canvas id="heartCanvas" width="200" height="200"></canvas>
     <section id="our-favorite-teas">
       <h2>Our Teas(Click on hearts to add to favorite):</h2>
       <ul>
@@ -274,26 +277,23 @@
     <br><br>
     
     <section id="reviews">
-      <form id="reviewForm">
-        <label for="userName">Name:</label>
-        <input type="text" id="userName" required>
+      <div class="review-form-container">
+        <form id="reviewForm">
+          <label for="userName">Name:</label>
+          <input type="text" id="userName" required>
     
-        <label for="rating">Rating:</label>
-        <input type="number" id="rating" min="1" max="5" required>
+          <label for="rating">Rating:</label>
+          <input type="number" id="rating" min="1" max="5" required>
     
-        <label for="reviewText">Review:</label>
-        <textarea id="reviewText" required></textarea>
+          <label for="reviewText">Review:</label>
+          <textarea id="reviewText" required></textarea>
     
-        <button type="button" onclick="submitReview()">Submit Review</button>
-      </form>
-
-      <div id="chartContainer">
-        <canvas id="reviewChart"></canvas>
+          <button type="button" onclick="submitReview()">Submit Review</button>
+        </form>
       </div>
+      
       <div id="reviewsContainer"></div>
-  
     </section>
-    
 
     <div id="socialMediaButtons">
       <a href="#" onclick="shareOnFacebook()">Share on Facebook</a>
